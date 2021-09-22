@@ -110,6 +110,21 @@
   display: block;
 }
 
+.product-form__error-message-wrapper:not([hidden]) {
+  display: flex;
+  align-items: flex-start;
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.product-form__error-message-wrapper svg {
+  flex-shrink: 0;
+  width: 1.2rem;
+  height: 1.2rem;
+  margin-right: 0.7rem;
+  margin-top: 0.5rem;
+}
+
 /* Form Elements */
 .product-form__input {
   flex: 0 0 100%;
@@ -147,7 +162,7 @@ fieldset.product-form__input .form__label {
 
 .product-form__input input[type='radio'] + label {
   border: 0.1rem solid rgba(var(--color-foreground), 0.55);
-  border-radius: 3px;
+  border-radius: 4rem;
   color: rgb(var(--color-foreground));
   display: inline-block;
   margin: 0.7rem 0.5rem 0.2rem 0;
@@ -158,7 +173,6 @@ fieldset.product-form__input .form__label {
   text-align: center;
   transition: border var(--duration-short) ease;
   cursor: pointer;
-  width: 100%;
 }
 
 .product-form__input input[type='radio'] + label:hover {
@@ -206,6 +220,7 @@ fieldset.product-form__input .form__label {
   --alpha-button-background: 1;
 }
 
+.product-form__submit[aria-disabled="true"] + .shopify-payment-button,
 .product-form__submit[disabled] + .shopify-payment-button {
   display: none;
 }
@@ -311,12 +326,16 @@ a.product__text {
 .product--no-media .product-form__input--dropdown,
 .product--no-media .share-button,
 .product--no-media .product__view-details,
-.product--no-media .store-availability-container,
+.product--no-media .product__pickup-availabilities,
 .product--no-media .product-form {
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
+}
+
+.product--no-media .product-form {
+  flex-direction: column;
 }
 
 .product--no-media .product-form > .form {
@@ -760,70 +779,4 @@ a.product__text {
   height: auto;
   margin: 0;
   width: 2.2rem;
-}
-
-
-/* NEW REVISIONS NOLAN WAGNER 9/13/21 */
-
-#_2-Person-Option {
-  display: none;
-}
-
-.product__variant-btn {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.product__addons-section {
-  display: flex;
-  justify-content: center;
-}
-.product__addons-container {
-  border: solid #000 1px;
-  border-radius: 5px;
-}
-.product__addons-title {
-  text-align: center;
-  margin: 0;
-}
-.product__addons-image {}
-.product__addons-paragraph {
-  text-align: center;
-  margin: 0;
-}
-
-
-
-
-.alt-content__container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  margin-top: 60px;
-  margin-bottom: 60px;
-}
-
-.alt-content__content {
-  max-width: 30%;
-  position: absolute;
-  left: 10%;
-  background-color: #fff;
-  border-radius: 38px;
-  padding: 10px 20px;
-}
-
-.alt-content__content-switch {
-  left: unset;
-  right: 10%;
-}
-
-.alt-content__image {
-  margin-left: 200px;
-  border-radius: 38px;
-}
-
-.alt-content__image--right {
-  margin-right: 200px !important;
 }

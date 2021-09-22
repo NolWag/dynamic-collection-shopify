@@ -1,0 +1,45 @@
+
+<ul class="collection__navigation-bar" id="collection-nav">
+    {%- for block in section.blocks -%}
+        <li class="collection__navigation-item">
+            <p class="nav-item" id="_{{block.settings.collection.title }}">{{ block.settings.collection.title }}</p>
+        </li>
+    {%- endfor -%}
+</ul>
+
+<div class="collection__navigation-select-container">
+    <select id="collection-select">
+        {%- for block in section.blocks -%}
+            <option id="_{{block.settings.collection.title }}">
+                {{ block.settings.collection.title }}
+            </option>
+        {%- endfor -%}
+    </select>
+</div>
+
+
+{% schema %}
+{
+  "name": "Collection Navigation",
+  "max_blocks": 12,
+  "blocks": [
+    {
+      "type": "link",
+      "name": "Collection",
+      "settings": [
+        {
+          "type": "collection",
+          "id": "collection",
+          "label": "Collection"
+        }
+      ]
+    }
+  ],
+  "presets": [
+  {
+    "name": "Collection Navigation"
+  }
+]
+
+}
+{% endschema %}

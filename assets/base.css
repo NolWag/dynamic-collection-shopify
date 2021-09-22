@@ -693,6 +693,10 @@ summary::-webkit-details-marker {
 
 @media screen and (min-width: 750px) {
   .disclosure-has-popup[open] > summary + * {
+    z-index: 4;
+  }
+
+  .facets .disclosure-has-popup[open] > summary + * {
     z-index: 2;
   }
 }
@@ -903,7 +907,7 @@ summary::-webkit-details-marker {
     padding-left: 1rem;
     padding-bottom: 1rem;
     width: calc(25% - 1rem * 3 / 4);
-    max-width: 50%;
+    max-width: 25%;
   }
 }
 
@@ -1061,7 +1065,7 @@ summary::-webkit-details-marker {
   background-color: transparent;
 }
 
-.media > *:not(.zoom, .deferred-media__poster-button),
+.media > *:not(.zoom):not(.deferred-media__poster-button),
 .media model-viewer {
   display: block;
   max-width: 100%;
@@ -1704,7 +1708,7 @@ input[type='checkbox'] {
   right: 0;
   bottom: 0;
   background: rgb(var(--color-background));
-  z-index: 1;
+  z-index: 4;
   display: flex;
   justify-content: center;
   align-items: center;

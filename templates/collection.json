@@ -2,15 +2,66 @@
   "sections": {
     "banner": {
       "type": "main-collection-banner",
+      "settings": {
+        "show_collection_description": true,
+        "show_collection_image": false
+      }
+    },
+    "16319024828d61e8df": {
+      "type": "collection-navigation",
+      "blocks": {
+        "21cc6b97-362a-4853-8134-9ff5b1cef9c3": {
+          "type": "link",
+          "settings": {
+            "collection": "all"
+          }
+        },
+        "f336aac6-5f0d-4d93-8974-0bcb1dbf6667": {
+          "type": "link",
+          "settings": {
+            "collection": "matresses"
+          }
+        },
+        "12b1e9be-5b37-4a7a-8b5d-6cf7cca52868": {
+          "type": "link",
+          "settings": {
+            "collection": "bedding"
+          }
+        },
+        "6fa70fdc-b462-4ce5-818e-b35dd6339ba7": {
+          "type": "link",
+          "settings": {
+            "collection": "bedroom"
+          }
+        }
+      },
+      "block_order": [
+        "21cc6b97-362a-4853-8134-9ff5b1cef9c3",
+        "f336aac6-5f0d-4d93-8974-0bcb1dbf6667",
+        "12b1e9be-5b37-4a7a-8b5d-6cf7cca52868",
+        "6fa70fdc-b462-4ce5-818e-b35dd6339ba7"
+      ],
       "settings": {}
     },
     "product-grid": {
       "type": "main-collection-product-grid",
-      "settings": {}
+      "settings": {
+        "products_per_page": 16,
+        "image_ratio": "square",
+        "show_secondary_image": false,
+        "add_image_padding": false,
+        "show_image_outline": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_filtering": false,
+        "enable_sorting": false,
+        "collapse_on_larger_devices": false
+      }
     }
   },
   "order": [
     "banner",
+    "16319024828d61e8df",
     "product-grid"
   ]
 }

@@ -1,4 +1,4 @@
-.customer:not(.account, .order) {
+.customer:not(.account):not(.order) {
   margin: 6rem auto 9rem;
   max-width: 33.4rem;
   padding: 0 1.5rem;
@@ -6,7 +6,7 @@
 }
 
 @media screen and (min-width: 750px) {
-  .customer:not(.account, .order) {
+  .customer:not(.account):not(.order) {
     max-width: 47.8rem;
   }
 }
@@ -338,7 +338,7 @@
 }
 
 #recover:target {
-  display: inline;
+  display: block;
 }
 
 #recover:target + div {
@@ -348,6 +348,15 @@
 #recover:target ~ #login,
 #recover:target ~ #login + div {
   display: none;
+}
+
+#recover,
+#login {
+  scroll-margin-top: 20rem;
+}
+
+#recover {
+  margin-bottom: 0;
 }
 
 .activate button[name='decline'],
